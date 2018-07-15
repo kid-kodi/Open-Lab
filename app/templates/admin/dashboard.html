@@ -1,0 +1,40 @@
+{% extends "admin/index.html" %}
+{% set active_page = "index" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+{% block admin_app %}
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1>Hi, {{ current_user.username }}!</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            <div class="card">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Catégories</h5>
+                    <p>{{categories|length}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h5 class="card-title">Marques</h5>
+                    <p>{{labels|length}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h5 class="card-title">Unités</h5>
+                    <p>{{services|length}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+

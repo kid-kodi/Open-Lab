@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% set navigation_bar = [
+    ('admin.index', 'index', 'Dashboard'),
+    ('admin.category', 'category', 'Categories de materiels'),
+    ('admin.label', 'label', 'Marques de materiels'),
+    ('admin.service', 'service', 'Service / Unité')
+] -%}
+
+{% set active_page = active_page|default('index') -%}
+
+{% block content %}
+<nav class="navbar">
+  <div class="container">
+      <div class="row">
+          <div class="col">
+              <ul class="nav">
+                  {% for href, id, caption in navigation_bar %}
+                  <li class="nav-item">
+                      <a {% if id == active_page %}
+                         class="nav-link active"
+                         {% else %}
+                         class="nav-link"
+                         {% endif %} href="{{ url_for(href|e) }}">{{ caption|e }}</a>
+                  </li>
+                  {% endfor %}
+              </ul>
+          </div>
+      </div>
+  </div>
+</nav>
+<div>
+    <div class="container">
+        <div class="row">
+            {% block admin_app %}{% endblock %}
+        </div>
+    </div>
+</div>
+{% endblock %}

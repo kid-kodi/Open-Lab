@@ -1,0 +1,36 @@
+{% extends "admin/index.html" %}
+{% set active_page = "service" %}
+{% block admin_app %}
+<div class="container">
+
+  <div class="btn-toolbar justify-content-between py-4">
+    <h1>Service</h1>
+    <div>
+      <a class="btn btn-success" href="{{ url_for('admin.add_service') }}">Nouveau service</a>
+    </div>
+  </div>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Nom</th>
+        <th>Description</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for item in list %}
+        <tr>
+            <td>{{item.id}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.description}}</td>
+            <td>
+                <a href="{{ url_for('admin.detail_service', id=item.id) }}">Detail</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}

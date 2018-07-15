@@ -1,0 +1,29 @@
+{% extends "home/index.html" %}
+{% set active_page = "interview" %}
+{% block home_app %}
+    <h1>{{interview.name}}</h1>
+    <a href="{{ url_for('home.edit_interview', id=interview.id) }}">Modifier</a>
+    <div>
+    	<h3>Générale</h3>
+    	<div>
+    		<table>
+				<tr>
+    				<td>Intervenant</td>
+    				<td>{{interview.interviewer}}</td>
+    			</tr>
+				<tr>
+    				<td>Lieu</td>
+    				<td>{{interview.service}}</td>
+    			</tr>
+    			<tr>
+    				<td>Date</td>
+    				<td>{{interview.date}}</td>
+    			</tr>
+    			<tr>
+    				<td>Description</td>
+    				<td>{{interview.description}}</td>
+    			</tr>
+    		</table>
+    	</div>
+    </div>
+{% endblock %}

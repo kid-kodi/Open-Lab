@@ -1,0 +1,131 @@
+2018-07-11 13:33:52,750 ERROR: Exception on /interview/add [GET] [in /home/kodi/anaconda3/lib/python3.6/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/flask_login/utils.py", line 228, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/kodi/Workspace/parky/app/home/routes.py", line 125, in add_interview
+    return render_template('home/interview/add_interview.html', form=form)
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/flask/templating.py", line 134, in render_template
+    context, ctx.app)
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/flask/templating.py", line 116, in _render
+    rv = template.render(context)
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/home/kodi/Workspace/parky/app/templates/home/interview/add_interview.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "/home/kodi/Workspace/parky/app/templates/home/index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/kodi/Workspace/parky/app/templates/base.html", line 34, in top-level template code
+    {% block content %}{% endblock %}
+  File "/home/kodi/Workspace/parky/app/templates/home/index.html", line 10, in block "content"
+    {% block home_app %}{% endblock %}
+  File "/home/kodi/Workspace/parky/app/templates/home/interview/add_interview.html", line 5, in block "home_app"
+    {{ wtf.quick_form(form) }}
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/jinja2/runtime.py", line 553, in _invoke
+    rv = self._func(*arguments)
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/flask_bootstrap/templates/bootstrap/wtf.html", line 205, in template
+    {{ form_field(field,
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/jinja2/runtime.py", line 553, in _invoke
+    rv = self._func(*arguments)
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/flask_bootstrap/templates/bootstrap/wtf.html", line 123, in template
+    {{field(class="form-control", **kwargs)|safe}}
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/wtforms/fields/core.py", line 153, in __call__
+    return self.meta.render_field(self, kwargs)
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/wtforms/meta.py", line 56, in render_field
+    return field.widget(field, **render_kw)
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/wtforms/widgets/core.py", line 287, in __call__
+    for val, label, selected in field.iter_choices():
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/wtforms/fields/core.py", line 451, in iter_choices
+    for value, label in self.choices:
+ValueError: not enough values to unpack (expected 2, got 0)
+2018-07-11 13:37:36,803 INFO: Microblog startup [in /home/kodi/Workspace/parky/app/__init__.py:65]
+2018-07-11 13:38:18,284 INFO: Microblog startup [in /home/kodi/Workspace/parky/app/__init__.py:65]
+2018-07-11 13:39:07,037 INFO: Microblog startup [in /home/kodi/Workspace/parky/app/__init__.py:65]
+2018-07-11 13:39:12,440 INFO: Microblog startup [in /home/kodi/Workspace/parky/app/__init__.py:65]
+2018-07-11 13:39:18,061 INFO: Microblog startup [in /home/kodi/Workspace/parky/app/__init__.py:65]
+2018-07-11 13:40:48,553 INFO: Microblog startup [in /home/kodi/Workspace/parky/app/__init__.py:65]
+2018-07-11 13:41:29,089 INFO: Microblog startup [in /home/kodi/Workspace/parky/app/__init__.py:65]
+2018-07-11 13:45:29,714 INFO: Microblog startup [in /home/kodi/Workspace/parky/app/__init__.py:65]
+2018-07-11 13:46:54,829 ERROR: Exception on /interview/edit/1 [POST] [in /home/kodi/Workspace/parky/venv/lib/python3.6/site-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/home/kodi/Workspace/parky/venv/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/kodi/Workspace/parky/venv/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/kodi/Workspace/parky/venv/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/kodi/Workspace/parky/venv/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/home/kodi/Workspace/parky/venv/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/kodi/Workspace/parky/venv/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/kodi/Workspace/parky/venv/lib/python3.6/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/kodi/Workspace/parky/app/home/routes.py", line 144, in edit_interview
+    return redirect(url_for('interview'))
+  File "/home/kodi/Workspace/parky/venv/lib/python3.6/site-packages/flask/helpers.py", line 356, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/home/kodi/Workspace/parky/venv/lib/python3.6/site-packages/flask/app.py", line 2061, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "/home/kodi/Workspace/parky/venv/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/home/kodi/Workspace/parky/venv/lib/python3.6/site-packages/flask/helpers.py", line 345, in url_for
+    force_external=external)
+  File "/home/kodi/Workspace/parky/venv/lib/python3.6/site-packages/werkzeug/routing.py", line 1776, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'interview'. Did you mean 'home.interview' instead?
+2018-07-11 13:47:37,449 INFO: Microblog startup [in /home/kodi/Workspace/parky/app/__init__.py:65]
+2018-07-11 13:47:48,551 ERROR: Exception on /interview/edit/1 [POST] [in /home/kodi/Workspace/parky/venv/lib/python3.6/site-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/home/kodi/Workspace/parky/venv/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/kodi/Workspace/parky/venv/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/kodi/Workspace/parky/venv/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/kodi/Workspace/parky/venv/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/home/kodi/Workspace/parky/venv/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/kodi/Workspace/parky/venv/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/kodi/Workspace/parky/venv/lib/python3.6/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/kodi/Workspace/parky/app/home/routes.py", line 144, in edit_interview
+    return redirect(url_for('interview'))
+  File "/home/kodi/Workspace/parky/venv/lib/python3.6/site-packages/flask/helpers.py", line 356, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/home/kodi/Workspace/parky/venv/lib/python3.6/site-packages/flask/app.py", line 2061, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "/home/kodi/Workspace/parky/venv/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/home/kodi/Workspace/parky/venv/lib/python3.6/site-packages/flask/helpers.py", line 345, in url_for
+    force_external=external)
+  File "/home/kodi/Workspace/parky/venv/lib/python3.6/site-packages/werkzeug/routing.py", line 1776, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'interview'. Did you mean 'home.interview' instead?
+2018-07-11 13:48:07,258 INFO: Microblog startup [in /home/kodi/Workspace/parky/app/__init__.py:65]
+2018-07-11 13:51:20,513 INFO: Microblog startup [in /home/kodi/Workspace/parky/app/__init__.py:65]
+2018-07-11 13:59:49,225 INFO: Microblog startup [in /home/kodi/Workspace/parky/app/__init__.py:65]
+2018-07-11 15:44:13,734 INFO: Microblog startup [in /home/kodi/Workspace/parky/app/__init__.py:65]
+2018-07-11 15:47:50,252 INFO: Microblog startup [in /home/kodi/Workspace/parky/app/__init__.py:65]
+2018-07-11 15:56:09,610 INFO: Microblog startup [in /home/kodi/Workspace/parky/app/__init__.py:65]
+2018-07-11 16:00:11,188 INFO: Microblog startup [in /home/kodi/Workspace/parky/app/__init__.py:65]

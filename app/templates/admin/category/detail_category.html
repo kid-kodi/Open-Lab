@@ -1,0 +1,21 @@
+{% extends "admin/index.html" %}
+{% set active_page = "category" %}
+{% block admin_app %}
+    <h1>{{category.name}}</h1>
+    <a href="{{ url_for('admin.edit_category', id=category.id) }}">Modifier</a>
+    <div>
+    	<h3>Générale</h3>
+    	<div>
+    		<table>
+    			<tr>
+    				<td>Nom</td>
+    				<td>{{category.name}}</td>
+    			</tr>
+    			<tr>
+    				<td>Description</td>
+    				<td>{{category.description}}</td>
+    			</tr>
+    		</table>
+    	</div>
+    </div>
+{% endblock %}

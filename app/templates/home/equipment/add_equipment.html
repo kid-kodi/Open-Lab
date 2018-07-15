@@ -1,0 +1,49 @@
+{% extends "home/index.html" %}
+{% set active_page = "interview" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+{% block home_app %}
+    <div class="container mt-2">
+      <div class="row justify-content-md-center">
+        <div class="col-4">
+            <h1>Equipement</h1>
+            <form action="" method="post" novalidate>
+                {{ form.hidden_tag() }}
+                <p>
+                    {{ form.category.label }}<br>
+                    {{ form.category() }}
+                </p>
+                <p>
+                    {{ form.label.label }}<br>
+                    {{ form.label() }}
+                </p>
+                <p>
+                    {{ form.service.label }}<br>
+                    {{ form.service() }}
+                </p>
+                <p>
+                    {{ form.name.label }}<br>
+                    {{ form.name() }}
+                </p>
+                <p>
+                    {{ form.model.label }}<br>
+                    {{ form.model(size=32) }}
+                </p>
+                <p>
+                    {{ form.serial.label }}<br>
+                    {{ form.serial(size=32) }}
+                </p>
+                <p>
+                    {{ form.arrived_at.label }}<br>
+                    {{ form.arrived_at(class="dtpick") }}
+                </p>
+                <p>
+                    {{ form.description.label }}<br>
+                    {{ form.description() }}
+                </p>
+                <p>{{ form.submit() }}</p>
+            </form>
+
+        </div>
+      </div>
+    </div>
+{% endblock %}

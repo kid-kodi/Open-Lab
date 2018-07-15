@@ -1,0 +1,29 @@
+{% extends "home/index.html" %}
+{% set active_page = "order" %}
+{% block home_app %}
+    <h1>{{order.name}}</h1>
+    <a href="{{ url_for('home.edit_order', id=order.id) }}">Modifier</a>
+    <div>
+    	<h3>Générale</h3>
+    	<div>
+    		<table>
+				<tr>
+    				<td>Intervenant</td>
+    				<td>{{order.orderer}}</td>
+    			</tr>
+				<tr>
+    				<td>Lieu</td>
+    				<td>{{order.service}}</td>
+    			</tr>
+    			<tr>
+    				<td>Date</td>
+    				<td>{{order.date}}</td>
+    			</tr>
+    			<tr>
+    				<td>Description</td>
+    				<td>{{order.description}}</td>
+    			</tr>
+    		</table>
+    	</div>
+    </div>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "admin/index.html" %}
+{% set active_page = "service" %}
+{% block admin_app %}
+    <h1>{{service.name}}</h1>
+    <a href="{{ url_for('admin.edit_service', id=service.id) }}">Modifier</a>
+    <div>
+    	<h3>Générale</h3>
+    	<div>
+    		<table>
+    			<tr>
+    				<td>Nom</td>
+    				<td>{{service.name}}</td>
+    			</tr>
+    			<tr>
+    				<td>Description</td>
+    				<td>{{service.description}}</td>
+    			</tr>
+    		</table>
+    	</div>
+    </div>
+{% endblock %}

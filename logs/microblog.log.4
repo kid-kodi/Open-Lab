@@ -1,0 +1,119 @@
+2018-07-10 17:35:37,917 ERROR: Exception on / [GET] [in /home/kodi/anaconda3/lib/python3.6/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/flask_login/utils.py", line 227, in decorated_view
+    return current_app.login_manager.unauthorized()
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/flask_login/login_manager.py", line 165, in unauthorized
+    return redirect(login_url(login_view, request.url))
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/flask_login/utils.py", line 97, in login_url
+    base = url_for(login_view)
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/flask/helpers.py", line 333, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1805, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/flask/helpers.py", line 323, in url_for
+    force_external=external)
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/werkzeug/routing.py", line 1768, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'login'. Did you mean 'auth.login' instead?
+2018-07-10 17:37:23,281 INFO: Microblog startup [in /home/kodi/Workspace/parky/app/__init__.py:65]
+2018-07-10 17:38:00,697 ERROR: Exception on /login [GET] [in /home/kodi/anaconda3/lib/python3.6/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/kodi/Workspace/parky/app/auth/routes.py", line 15, in login
+    return redirect(url_for('auth.index'))
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/flask/helpers.py", line 333, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1805, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/flask/helpers.py", line 323, in url_for
+    force_external=external)
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/werkzeug/routing.py", line 1768, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'auth.index'. Did you mean 'auth.login' instead?
+2018-07-10 17:38:52,506 INFO: Microblog startup [in /home/kodi/Workspace/parky/app/__init__.py:65]
+2018-07-10 17:48:35,665 INFO: Microblog startup [in /home/kodi/Workspace/parky/app/__init__.py:65]
+2018-07-10 18:02:16,203 INFO: Microblog startup [in /home/kodi/Workspace/parky/app/__init__.py:65]
+2018-07-10 18:02:23,977 INFO: Microblog startup [in /home/kodi/Workspace/parky/app/__init__.py:65]
+2018-07-10 18:02:48,564 INFO: Microblog startup [in /home/kodi/Workspace/parky/app/__init__.py:65]
+2018-07-10 18:02:52,103 INFO: Microblog startup [in /home/kodi/Workspace/parky/app/__init__.py:65]
+2018-07-10 18:02:56,088 INFO: Microblog startup [in /home/kodi/Workspace/parky/app/__init__.py:65]
+2018-07-10 18:03:02,750 INFO: Microblog startup [in /home/kodi/Workspace/parky/app/__init__.py:65]
+2018-07-10 18:03:07,543 ERROR: Exception on /interview/add [GET] [in /home/kodi/anaconda3/lib/python3.6/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1610, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1831, in preprocess_request
+    rv = func()
+  File "/home/kodi/Workspace/parky/app/home/routes.py", line 12, in before_request
+    if current_user.is_authenticated:
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/werkzeug/local.py", line 347, in __getattr__
+    return getattr(self._get_current_object(), name)
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/werkzeug/local.py", line 306, in _get_current_object
+    return self.__local()
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/flask_login/utils.py", line 26, in <lambda>
+    current_user = LocalProxy(lambda: _get_user())
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/flask_login/utils.py", line 302, in _get_user
+    current_app.login_manager._load_user()
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/flask_login/login_manager.py", line 317, in _load_user
+    return self.reload_user()
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/flask_login/login_manager.py", line 279, in reload_user
+    user = self.user_callback(user_id)
+  File "/home/kodi/Workspace/parky/app/models.py", line 124, in load_user
+    return User.query.get(int(id))
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/flask_sqlalchemy/__init__.py", line 512, in __get__
+    mapper = orm.class_mapper(type)
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/base.py", line 421, in class_mapper
+    mapper = _inspect_mapped_class(class_, configure=configure)
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/base.py", line 400, in _inspect_mapped_class
+    mapper._configure_all()
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/mapper.py", line 1222, in _configure_all
+    configure_mappers()
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/mapper.py", line 2872, in configure_mappers
+    mapper._post_configure_properties()
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/mapper.py", line 1765, in _post_configure_properties
+    prop.init()
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/interfaces.py", line 184, in init
+    self.do_init()
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/relationships.py", line 1657, in do_init
+    self._generate_backref()
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/relationships.py", line 1838, in _generate_backref
+    (backref_key, self, m))
+sqlalchemy.exc.ArgumentError: Error creating backref 'service' on relationship 'Service.interviews': property of that name exists on mapper 'Mapper|Interview|interview'
+2018-07-10 18:05:19,208 INFO: Microblog startup [in /home/kodi/Workspace/parky/app/__init__.py:65]
+2018-07-11 12:34:01,090 INFO: Microblog startup [in /home/kodi/Workspace/parky/app/__init__.py:65]
+2018-07-11 12:40:56,341 INFO: Microblog startup [in /home/kodi/Workspace/parky/app/__init__.py:65]

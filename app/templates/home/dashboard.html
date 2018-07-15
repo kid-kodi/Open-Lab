@@ -1,0 +1,40 @@
+{% extends "home/index.html" %}
+{% set active_page = "index" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+{% block home_app %}
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1>Hi, {{ current_user.username }}!</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            <div class="card">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Interventions</h5>
+                    <p>{{interviews|length}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h5 class="card-title">Commandes</h5>
+                    <p>{{orders|length}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h5 class="card-title">Materiels</h5>
+                    <p>{{equipments|length}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+

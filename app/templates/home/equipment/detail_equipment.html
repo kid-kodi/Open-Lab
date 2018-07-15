@@ -1,0 +1,48 @@
+{% extends "home/index.html" %}
+{% set active_page = "interview" %}
+{% block home_app %}
+<div class="container">
+    <div class="btn-toolbar justify-content-between py-4">
+        <div>
+            <h1>{{equipment.name}}</h1>
+            <p>{{ moment(equipment.arrived_at).format('LL') }} | {{equipment.user.username}}</p>
+        </div>
+        <div>
+          <a class="btn btn-success" href="{{ url_for('home.edit_equipment', id=equipment.id) }}">Modifier</a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+
+            <div class="card text-center">
+              <div class="card-header">
+                <ul class="nav nav-tabs card-header-tabs">
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#">Générale</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="card-body">
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td>Categorie</td>
+                            <td>{{equipment.category.name}}</td>
+                        </tr>
+                        <tr>
+                            <td>Marque</td>
+                            <td>{{equipment.label.name}}</td>
+                        </tr>
+                        <tr>
+                            <td>Localisation</td>
+                            <td>{{equipment.service.name}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

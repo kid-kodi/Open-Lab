@@ -1,0 +1,13 @@
+{% extends "admin/index.html" %}
+{% set active_page = "label" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+{% block admin_app %}
+    <div class="container mt-2">
+      <div class="row">
+        <div class="col-4">
+            <h1>Marque</h1>
+            {{ wtf.quick_form(form) }}
+        </div>
+      </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,117 @@
+2018-07-11 12:40:59,795 ERROR: Exception on /interview/add [GET] [in /home/kodi/anaconda3/lib/python3.6/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/flask_login/utils.py", line 228, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/kodi/Workspace/parky/app/home/routes.py", line 125, in add_interview
+    return render_template('home/interview/add_interview.html', form=form)
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/flask/templating.py", line 134, in render_template
+    context, ctx.app)
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/flask/templating.py", line 116, in _render
+    rv = template.render(context)
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/home/kodi/Workspace/parky/app/templates/home/interview/add_interview.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "/home/kodi/Workspace/parky/app/templates/home/index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/kodi/Workspace/parky/app/templates/base.html", line 34, in top-level template code
+    {% block content %}{% endblock %}
+  File "/home/kodi/Workspace/parky/app/templates/home/index.html", line 10, in block "content"
+    {% block home_app %}{% endblock %}
+  File "/home/kodi/Workspace/parky/app/templates/home/interview/add_interview.html", line 5, in block "home_app"
+    {{ wtf.quick_form(form) }}
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/jinja2/runtime.py", line 553, in _invoke
+    rv = self._func(*arguments)
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/flask_bootstrap/templates/bootstrap/wtf.html", line 205, in template
+    {{ form_field(field,
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/jinja2/runtime.py", line 553, in _invoke
+    rv = self._func(*arguments)
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/flask_bootstrap/templates/bootstrap/wtf.html", line 123, in template
+    {{field(class="form-control", **kwargs)|safe}}
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/wtforms/fields/core.py", line 153, in __call__
+    return self.meta.render_field(self, kwargs)
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/wtforms/meta.py", line 56, in render_field
+    return field.widget(field, **render_kw)
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/wtforms/widgets/core.py", line 287, in __call__
+    for val, label, selected in field.iter_choices():
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/wtforms/fields/core.py", line 451, in iter_choices
+    for value, label in self.choices:
+ValueError: too many values to unpack (expected 2)
+2018-07-11 12:41:27,067 INFO: Microblog startup [in /home/kodi/Workspace/parky/app/__init__.py:65]
+2018-07-11 12:41:57,702 INFO: Microblog startup [in /home/kodi/Workspace/parky/app/__init__.py:65]
+2018-07-11 12:44:18,206 INFO: Microblog startup [in /home/kodi/Workspace/parky/app/__init__.py:65]
+2018-07-11 12:44:21,308 ERROR: Exception on /interview/add [GET] [in /home/kodi/anaconda3/lib/python3.6/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/flask_login/utils.py", line 228, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/kodi/Workspace/parky/app/home/routes.py", line 125, in add_interview
+    return render_template('home/interview/add_interview.html', form=form)
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/flask/templating.py", line 134, in render_template
+    context, ctx.app)
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/flask/templating.py", line 116, in _render
+    rv = template.render(context)
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/home/kodi/Workspace/parky/app/templates/home/interview/add_interview.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "/home/kodi/Workspace/parky/app/templates/home/index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/kodi/Workspace/parky/app/templates/base.html", line 34, in top-level template code
+    {% block content %}{% endblock %}
+  File "/home/kodi/Workspace/parky/app/templates/home/index.html", line 10, in block "content"
+    {% block home_app %}{% endblock %}
+  File "/home/kodi/Workspace/parky/app/templates/home/interview/add_interview.html", line 5, in block "home_app"
+    {{ wtf.quick_form(form) }}
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/jinja2/runtime.py", line 553, in _invoke
+    rv = self._func(*arguments)
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/flask_bootstrap/templates/bootstrap/wtf.html", line 205, in template
+    {{ form_field(field,
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/jinja2/runtime.py", line 553, in _invoke
+    rv = self._func(*arguments)
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/flask_bootstrap/templates/bootstrap/wtf.html", line 123, in template
+    {{field(class="form-control", **kwargs)|safe}}
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/wtforms/fields/core.py", line 153, in __call__
+    return self.meta.render_field(self, kwargs)
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/wtforms/meta.py", line 56, in render_field
+    return field.widget(field, **render_kw)
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/wtforms/widgets/core.py", line 287, in __call__
+    for val, label, selected in field.iter_choices():
+  File "/home/kodi/anaconda3/lib/python3.6/site-packages/wtforms/fields/core.py", line 451, in iter_choices
+    for value, label in self.choices:
+ValueError: not enough values to unpack (expected 2, got 0)

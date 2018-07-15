@@ -1,0 +1,17 @@
+#flash-message{
+    position: absolute;
+    top: -40px;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.nav li a{
+    color : #ddd;
+    border-bottom : solid 3px transparent;
+}
+
+.nav li a.active{
+    color : #000;
+    border-bottom : solid 3px #ccc;
+}

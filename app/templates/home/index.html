@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% set navigation_bar = [
+    ('home.index', 'index', 'Dashboard'),
+    ('home.interview', 'interview', 'Intervention'),
+    ('home.order', 'order', 'Commande'),
+    ('home.equipment', 'equipment', 'Materiels informatiques')
+] -%}
+
+{% set active_page = active_page|default('index') -%}
+
+
+
+{% block content %}
+<nav class="navbar">
+  <div class="container">
+      <div class="row">
+          <div class="col">
+              <ul class="nav">
+                  {% for href, id, caption in navigation_bar %}
+                  <li class="nav-item">
+                      <a {% if id == active_page %}
+                         class="nav-link active"
+                         {% else %}
+                         class="nav-link"
+                         {% endif %} href="{{ url_for(href|e) }}">{{ caption|e }}</a>
+                  </li>
+                  {% endfor %}
+              </ul>
+          </div>
+      </div>
+  </div>
+</nav>
+<div>
+    <div class="container">
+        <div class="row">
+            {% block home_app %}{% endblock %}
+        </div>
+    </div>
+</div>
+{% endblock %}
